@@ -1,0 +1,9 @@
+Django==4.2.16
+Markdown==3.11.3
+bleach==6.4.0
+django-cors-headers==4.9.0
+django-filter==25.1
+django-taggit==6.1.0
+djangorestframework==3.17.2
+gunicorn==26.2.0
+pillow==13.0.0
