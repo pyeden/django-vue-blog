@@ -1,0 +1,28 @@
+.DS_Store
+*.log
+.env
+.env.*
+
+# Python
+backend/.venv/
+backend/db.sqlite3
+backend/logs/
+backend/media/
+backend/staticfiles/
+**/__pycache__/
+*.py[cod]
+.pytest_cache/
+
+# Node
+frontend/node_modules/
+frontend/dist/
+frontend/.vite/
+npm-debug.log*
+
+# Local artifacts
+release/
+tmp/
+
+# 教程构建需要的环境文件（不含密钥）
+!frontend/.env.development
+!frontend/.env.production
