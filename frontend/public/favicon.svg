@@ -1,0 +1,5 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64">
+  <rect width="64" height="64" rx="10" fill="#faf6ee"/>
+  <rect x="8" y="8" width="48" height="48" rx="4" fill="none" stroke="#cdbfa8" stroke-width="1.5"/>
+  <text x="32" y="43" font-family="'Songti SC', Georgia, serif" font-size="30" fill="#a9482a" text-anchor="middle">纸</text>
+</svg>
