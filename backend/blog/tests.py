@@ -253,5 +253,14 @@ class ArticleApiTests(TestCase):
         self.assertEqual(tags.status_code, 200)
         self.assertEqual(tags.json()[0]["name"], "python")
 
+    def test_tag_filter_accepts_slug_case_insensitive(self):
+        tagged = self.make_article("Cased Tag")
+        tagged.tags.add("Django")
+        by_slug = self.client.get("/api/articles/?tag=django").json()
+        self.assertEqual(by_slug["count"], 1)
+        self.assertEqual(by_slug["results"][0]["slug"], tagged.slug)
+        by_name = self.client.get("/api/articles/?tag=Django").json()
+        self.assertEqual(by_name["count"], 1)
+
     def test_missing_article_returns_404(self):
         self.assertEqual(self.client.get("/api/articles/nope/").status_code, 404)

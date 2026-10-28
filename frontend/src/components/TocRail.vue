@@ -13,7 +13,7 @@ function scrollTo(anchor) {
 }
 
 onMounted(() => {
-  const headings = Array.from(document.querySelectorAll('.article-body .prose h1[id], .article-body .prose h2[id], .article-body .prose h3[id], .article-body .prose h4[id]'))
+  const headings = Array.from(document.querySelectorAll('.article-body .prose h1[id], .article-body .prose h2[id], .article-body .prose h3[id], .article-body .prose h4[id], .article-body .prose h5[id], .article-body .prose h6[id]'))
   if (!headings.length) return
   observer = new IntersectionObserver(
     (entries) => {

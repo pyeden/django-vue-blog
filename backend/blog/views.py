@@ -49,7 +49,9 @@ class ArticleViewSet(viewsets.ModelViewSet):
             queryset = queryset.filter(column_query)
         tag = self.request.query_params.get("tag")
         if tag:
-            queryset = queryset.filter(tags__name__in=[tag]).distinct()
+            queryset = queryset.filter(
+                Q(tags__name__iexact=tag) | Q(tags__slug__iexact=tag)
+            ).distinct()
         return queryset
 
     def retrieve(self, request, *args, **kwargs):
