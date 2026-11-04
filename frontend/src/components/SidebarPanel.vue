@@ -96,7 +96,7 @@ onMounted(() => {
     <section class="panel">
       <h3 class="panel-title">关于</h3>
       <p class="about-mini mb-0">
-        这是按《Django 博客教程》的功能路线，在 macOS 上重新实现的一套博客。
+        这是一个从零实现的个人博客。
         Django 4.2 负责数据与 API，Vue 3 负责页面。
       </p>
     </section>
