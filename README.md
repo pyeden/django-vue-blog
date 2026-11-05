@@ -1,16 +1,15 @@
-# Django + Vue 个人博客（MacBook 实作版）
+# 纸上集 · Django + Vue 个人博客
 
-按 `stacklens/django_blog_tutorial` 的功能路线，在 macOS 上重做的一套个人博客：
+一个从零实现的个人博客：Django 负责内容、权限和 API，Vue 负责阅读与写作的界面。
 
 - **后端**：Python 3.12 + Django 4.2 LTS + Django REST Framework + SQLite
 - **前端**：Vue 3 + Vite + Pinia + Vue Router + Bootstrap 5
-- **部署**：gunicorn + nginx 子路径，线上地址 <https://seres-ai.com/djangovueblog/>
-
-原教程是 Django 模板 + Bootstrap 4；本实作改成前后端分离，功能对齐，但代码、结构、界面和部署方式都是重新实现的。完整重写教程在 [`docs/`](docs/README.md)。
+- **线上**：<https://seres-ai.com/djangovueblog/>
+- **教程**：[`docs/`](docs/README.md)
 
 ## 功能
 
-文章 CRUD、Markdown 渲染与代码高亮、封面、栏目、标签、分页、搜索、最热、浏览量、点赞、两级评论、通知、用户注册/登录/资料/头像、密码重置、Django 后台、自动化测试、日志、子路径部署。
+文章 CRUD、Markdown 渲染与代码高亮、封面、栏目、标签、分页、搜索、最热、浏览量、点赞（服务端幂等）、两级评论、通知、注册/登录/资料/头像/密码重置/删除账号、Django 后台、自动化测试、日志、子路径部署。
 
 ## 本地启动
 
@@ -44,15 +43,14 @@ source .venv/bin/activate
 python manage.py test
 ```
 
-## 生产部署
-
-见 [`docs/40.部署.md`](docs/40.部署.md) 和 `deploy/` 下的脚本。
-
 ## 目录
 
 ```text
 backend/   Django 项目与 API
 frontend/  Vue 3 SPA
-docs/      重写教程（43 章）
+docs/      从零构建教程（15 章）
 deploy/    nginx / gunicorn / release
+DESIGN.md  数据模型与 API 设计
 ```
+
+演示账号：`demo / demo12345`。管理员 `admin` 的密码只保存在部署机的数据目录，不写入仓库。

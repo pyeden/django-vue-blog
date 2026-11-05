@@ -1,7 +1,7 @@
 # Django + Vue 个人博客 · 后端（macOS 实作版）
 
 Python 3.12 + Django 4.2 LTS + Django REST Framework + SQLite 的后端 API。
-所有数据模型与接口形状以仓库根目录 `SPEC.md` 为准。
+所有数据模型与接口形状以仓库根目录 `DESIGN.md` 为准。
 
 ## 环境要求
 
@@ -145,7 +145,7 @@ backend/
 
 ## API 速览
 
-统一前缀 `/api`，响应形状见 `SPEC.md`。
+统一前缀 `/api`，响应形状见 `DESIGN.md`。
 
 - 认证：`auth/csrf/`、`auth/register/`、`auth/login/`、`auth/logout/`、`auth/me/`、`auth/password-reset/`
 - 资料：`profile/`（GET/PATCH）、`profile/avatar/`（POST multipart）
